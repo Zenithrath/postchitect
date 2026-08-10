@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import AnimatedContent from "./AnimatedContent";
+import SpecularButton from "./SpecularButton";
 
 const NAV_ITEMS = [
   { label: "Projects", href: "#projects" },
@@ -68,6 +70,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const [heroAnimationComplete, setHeroAnimationComplete] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -107,13 +110,39 @@ export default function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onHeroAnimationComplete = () => setHeroAnimationComplete(true);
+    window.addEventListener(
+      "postchitect:hero-animation-complete",
+      onHeroAnimationComplete,
+    );
+    return () =>
+      window.removeEventListener(
+        "postchitect:hero-animation-complete",
+        onHeroAnimationComplete,
+      );
+  }, []);
+
   return (
-    <header
-      className={`nav-in fixed inset-x-0 top-0 z-50 bg-[#0b0f13]/70 shadow-lg shadow-black/25 backdrop-blur-xl transition-all duration-500 ${
-        scrolled ? "bg-[#0b0f13]/85" : ""
-      }`}
-    >
-      <div className="relative mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-10">
+    <>
+      <AnimatedContent
+        distance={72}
+        direction="vertical"
+        reverse
+        duration={0.75}
+        ease="power3.out"
+        initialOpacity={0}
+        threshold={0}
+        delay={0.82}
+        data-animated="navbar"
+        className="fixed inset-x-0 top-0 z-50"
+      >
+        <header
+          className={`relative bg-[#0b0f13]/70 shadow-lg shadow-black/25 backdrop-blur-xl transition-all duration-500 ${
+            scrolled ? "bg-[#0b0f13]/85" : ""
+          }`}
+        >
+          <div className="relative mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-10">
         {/* Logo — left */}
         <a
           href="#home"
@@ -144,12 +173,34 @@ export default function Navbar() {
 
         {/* CTA + mobile trigger — right */}
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="rounded-full border border-[#F6F5F1]/35 px-6 py-2.5 text-[12px] font-medium text-[#F6F5F1] transition-all duration-300 hover:border-[#DFA12A] hover:bg-[#DFA12A] hover:text-[#101C29] hover:shadow-[0_8px_24px_rgba(223,161,42,0.16)]"
+          <SpecularButton
+            size="sm"
+            radius={999}
+            tint="#0b0f13"
+            tintOpacity={0.3}
+            blur={10}
+            textColor="#F6F5F1"
+            lineColor="#DFA12A"
+            baseColor="#756B59"
+            intensity={1.2}
+            shineSize={14}
+            shineFade={45}
+            thickness={1}
+            speed={0.28}
+            followMouse
+            proximity={220}
+            autoAnimate={false}
+            onClick={() => {
+              const contact = document.getElementById("contact");
+              if (contact) {
+                contact.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.location.hash = "contact";
+              }
+            }}
           >
             Contact Me
-          </a>
+          </SpecularButton>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -165,12 +216,20 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </div>
+          </div>
+          <span
+            aria-hidden="true"
+            className={`nav-scan-line ${
+              heroAnimationComplete ? "nav-scan-line--active" : ""
+            }`}
+          />
+        </header>
+      </AnimatedContent>
 
       {/* Mobile menu — fullscreen deep navy */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-10 flex flex-col bg-[#101C29] text-[#F6F5F1] transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-[#101C29] text-[#F6F5F1] transition-all duration-500 md:hidden ${
           open ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
@@ -227,6 +286,6 @@ export default function Navbar() {
           </a>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
