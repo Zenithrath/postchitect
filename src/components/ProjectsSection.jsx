@@ -12,11 +12,11 @@ const projectSets = [
     images: [
       {
         src: "/images/projects/project-01-optimized.jpg",
-        alt: "Warm modern living room visualization",
+        alt: "3D visualization of a warm modern living room by Postchitect",
       },
       {
         src: "/images/projects/project-11.jpeg",
-        alt: "Modern residence exterior visualization",
+        alt: "3D exterior visualization of a modern residence by Postchitect",
       },
       {
         src: "/images/projects/project-10.jpeg",
@@ -32,11 +32,11 @@ const projectSets = [
     id: "sections",
     label: "Sections",
     title: "Building Section",
-    type: "Section Drawings",
+    type: "Architectural Drafting",
     images: [
       {
         src: "/images/projects/project-07.jpeg",
-        alt: "Two-storey building section drawing",
+        alt: "Architectural section drawing of a two-storey building by Postchitect",
       },
       {
         src: "/images/projects/project-03.jpeg",
@@ -60,7 +60,7 @@ const projectSets = [
     images: [
       {
         src: "/images/projects/project-05.jpeg",
-        alt: "Foundation construction detail drawing",
+        alt: "Construction detail drawing of a foundation by Postchitect",
       },
       {
         src: "/images/projects/project-06.jpeg",
@@ -89,7 +89,7 @@ export default function ProjectsSection() {
         <Reveal>
           <div className="grid grid-cols-12 items-end gap-x-3 gap-y-5 sm:gap-x-6 sm:gap-y-6">
             <h2 className="col-span-12 text-[clamp(1.75rem,2.8vw,2.75rem)] font-medium uppercase leading-none tracking-[-0.04em]">
-              Featured Project
+              Featured Projects
             </h2>
 
             <p className="col-span-5 max-w-sm text-[clamp(0.5rem,0.9vw,0.75rem)] uppercase leading-relaxed tracking-[0.02em] text-[#F1EEE7]/55">

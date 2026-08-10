@@ -13,6 +13,7 @@ export default function HeroSection() {
     >
       {/* Full-bleed oversized wordmark */}
       <AnimatedContent
+        as="h1"
         distance={120}
         direction="vertical"
         duration={0.85}
@@ -23,23 +24,17 @@ export default function HeroSection() {
         data-animated="wordmark"
         className="relative z-20 w-full shrink-0 sm:z-0"
       >
-        <div
-          aria-hidden="true"
-          className="container-x flex w-full -translate-y-3 select-none flex-col overflow-hidden font-sans text-[clamp(5.25rem,min(31vw,16svh),8.75rem)] font-extrabold tracking-[-0.075em] sm:hidden"
-        >
+        <span className="container-x flex w-full -translate-y-3 select-none flex-col overflow-hidden font-sans text-[clamp(5.25rem,min(31vw,16svh),8.75rem)] font-extrabold tracking-[-0.075em] sm:hidden">
           <span className="block self-start leading-[0.64] text-[#D5D5D1]">
             post
           </span>
           <span className="block self-end leading-[0.64] text-[#969B99]">
             chitect
           </span>
-        </div>
-        <div
-          aria-hidden="true"
-          className="hidden w-full select-none overflow-hidden whitespace-nowrap text-center font-sans font-semibold leading-[0.82] tracking-[-0.09em] text-[#d0d0cc] sm:block sm:text-[clamp(5rem,14.2vw,11rem)]"
-        >
+        </span>
+        <span className="hidden w-full select-none overflow-hidden whitespace-nowrap text-center font-sans font-semibold leading-[0.82] tracking-[-0.09em] text-[#d0d0cc] sm:block sm:text-[clamp(5rem,14.2vw,11rem)]">
           postchitect
-        </div>
+        </span>
       </AnimatedContent>
 
       <div className="relative z-10 mt-3 grid min-w-0 w-full grid-cols-2 items-end gap-1.5 px-5 sm:-mt-[clamp(0.45rem,1.75vw,1.75rem)] sm:grid-cols-4 sm:gap-3 sm:px-8 lg:gap-4 lg:px-12">
@@ -79,6 +74,7 @@ export default function HeroSection() {
                 style={{ objectPosition: image.objectPosition }}
                 loading="eager"
                 decoding="async"
+                fetchPriority={index === 0 ? "high" : undefined}
               />
               <div
                 aria-hidden="true"
@@ -93,7 +89,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container-x pointer-events-none absolute inset-x-0 bottom-5 z-20 flex items-center justify-between text-[8px] uppercase tracking-[0.2em] text-[#F1EEE7]/40 sm:bottom-6 sm:text-[9px]">
-        <p>Architecture / Interior / Drawings</p>
+        <p>Architecture / Interior / 3D / Working Drawings</p>
         <p>Scroll to explore ↓</p>
       </div>
     </section>

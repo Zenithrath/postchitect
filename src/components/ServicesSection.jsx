@@ -8,29 +8,33 @@ const services = [
     id: 1,
     title: "Architectural Design",
     description:
-      "House planning focused on function, proportion, and buildability.",
+      "Residential architectural design developed around function, space and buildability.",
     image: "/images/projects/project-11.jpeg",
+    alt: "Residential architectural design by Postchitect",
   },
   {
     id: 2,
     title: "Interior Design",
     description:
-      "Interior spaces shaped around character, comfort, and daily use.",
+      "Functional interior planning shaped around space, use and visual character.",
     image: "/images/projects/project-10.jpeg",
+    alt: "Residential interior design by Postchitect",
   },
   {
     id: 3,
     title: "3D Visualization",
     description:
-      "Clear visual studies that show the project before construction.",
+      "Architectural visualization that helps clients understand the design before construction.",
     image: "/images/projects/project-01-optimized.jpg",
+    alt: "3D visualization of a modern residence by Postchitect",
   },
   {
     id: 4,
     title: "Working Drawings",
     description:
-      "Precise technical drawings prepared to guide construction work.",
+      "Technical documentation including floor plans, elevations, sections and construction details.",
     image: "/images/projects/project-06.jpeg",
+    alt: "Architectural working drawing by Postchitect",
   },
 ];
 
@@ -125,7 +129,7 @@ export default function ServicesSection() {
               <ResponsiveImage
                 key={activeService.id}
                 src={activeService.image}
-                alt={`${activeService.title} project example`}
+                alt={activeService.alt}
                 sizes="42vw"
                 loading="lazy"
                 decoding="async"
@@ -150,23 +154,21 @@ export default function ServicesSection() {
                 RP400K
               </p>
               <p className="mt-3 text-[clamp(0.52rem,0.85vw,0.68rem)] uppercase leading-relaxed tracking-[0.08em] text-[#F1EEE7]/60">
-                Includes a complete working drawing package
+                House design packages include essential architectural working
+                drawings for construction planning.
               </p>
             </div>
 
             <div className="col-span-7">
-              <p className="text-[clamp(0.62rem,1.05vw,0.85rem)] font-medium uppercase tracking-[0.06em]">
+              <h3 className="text-[clamp(0.62rem,1.05vw,0.85rem)] font-medium uppercase tracking-[0.06em]">
                 Working drawings include
-              </p>
+              </h3>
               <ul className="mt-4 space-y-1.5 text-[clamp(0.56rem,0.95vw,0.78rem)] leading-relaxed text-[#F1EEE7]/55">
                 <li>Floor plans.</li>
-                <li>Longitudinal and cross sections.</li>
-                <li>Front, rear, left, and right elevations.</li>
-                <li>
-                  Door and window frame, septic tank, bathroom, roof, and
-                  foundation details.
-                </li>
-                <li>Electrical, sanitation, and foundation plan layouts.</li>
+                <li>Elevations.</li>
+                <li>Sections.</li>
+                <li>Construction details.</li>
+                <li>Electrical, sanitation, and foundation plans.</li>
               </ul>
               <p className="mt-3 text-[clamp(0.56rem,0.95vw,0.76rem)] font-medium uppercase tracking-[0.08em] text-[#DFA12A]">
                 Site plan optional.

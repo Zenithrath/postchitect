@@ -9,7 +9,7 @@ export const SITE = {
     number: "+62 877-6619-5531",
     display: "+62 877-6619-5531",
     defaultMessage:
-      "Halo Postchitect, saya ingin konsultasi project desain.",
+      "Hello Postchitect, I would like to consult about a design project.",
   },
   email: "hello@postchitect.com",
   instagram: {

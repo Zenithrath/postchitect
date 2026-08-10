@@ -22,8 +22,9 @@ export default function AboutSection() {
             delay={100}
           >
             <p className="max-w-md text-[clamp(0.5rem,1.15vw,0.95rem)] uppercase leading-relaxed tracking-[0.01em] text-[#F1EEE7]/55">
-              We translate ideas into architecture, interiors, 3D visuals, and
-              precise working drawings ready for the next stage.
+              Postchitect provides architectural design, interior design, 3D
+              visualization and working drawings from concept to
+              construction-ready documentation.
             </p>
           </Reveal>
         </div>
