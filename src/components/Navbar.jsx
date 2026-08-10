@@ -119,7 +119,7 @@ export default function Navbar() {
             scrolled ? "bg-[#0b0f13]/85" : ""
           }`}
         >
-          <div className="container-x relative flex h-16 items-center justify-between">
+          <div className="container-x relative flex h-14 items-center justify-between sm:h-16">
         {/* Logo — left */}
         <a
           href="#home"
@@ -127,7 +127,7 @@ export default function Navbar() {
           aria-label="Postchitect — back to top"
         >
           <span className="block">
-            <span className="block text-[13px] font-semibold uppercase tracking-[0.3em] text-[#F6F5F1] transition-colors duration-300 group-hover:text-[#DFA12A]">
+            <span className="block text-[12px] font-semibold uppercase tracking-[0.3em] text-[#F6F5F1] transition-colors duration-300 group-hover:text-[#DFA12A] sm:text-[13px]">
               Postchitect
             </span>
             <span className="mt-0.5 hidden text-[8px] uppercase tracking-[0.26em] text-[#AEB8C1] transition-colors duration-300 group-hover:text-[#DFA12A] sm:block">

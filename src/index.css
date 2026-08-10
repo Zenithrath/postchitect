@@ -53,12 +53,12 @@
 }
 
 .hero-mobile-panel {
-  height: clamp(7.5rem, calc((100svh - 10rem) / 2), 21rem);
+  height: clamp(7.5rem, calc((100svh - 16rem) / 2), 21rem);
 }
 
 @media (max-width: 639px) and (max-height: 700px) {
   .hero-mobile-panel {
-    height: clamp(7.5rem, calc((100svh - 16rem) / 2), 18rem);
+    height: clamp(7.5rem, calc((100svh - 20rem) / 2), 18rem);
   }
 }
 

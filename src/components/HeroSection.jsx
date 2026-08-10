@@ -24,7 +24,7 @@ export default function HeroSection() {
         data-animated="wordmark"
         className="relative z-20 w-full shrink-0 sm:z-0"
       >
-        <span className="container-x flex w-full -translate-y-3 select-none flex-col overflow-hidden font-sans text-[clamp(5.25rem,min(31vw,16svh),8.75rem)] font-extrabold tracking-[-0.075em] sm:hidden">
+        <span className="container-x flex w-full -translate-y-3 select-none flex-col overflow-hidden font-sans text-[clamp(4.5rem,min(26vw,14svh),8.75rem)] font-extrabold tracking-[-0.075em] sm:hidden">
           <span className="block self-start leading-[0.64] text-[#D5D5D1]">
             post
           </span>
@@ -88,8 +88,13 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <div className="container-x pointer-events-none absolute inset-x-0 bottom-5 z-20 flex items-center justify-between text-[8px] uppercase tracking-[0.2em] text-[#F1EEE7]/40 sm:bottom-6 sm:text-[9px]">
-        <p>Architecture / Interior / 3D / Working Drawings</p>
+      <div className="container-x pointer-events-none absolute inset-x-0 bottom-5 z-20 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-[8px] uppercase tracking-[0.16em] text-[#F1EEE7]/40 sm:bottom-6 sm:flex-nowrap sm:text-[9px] sm:tracking-[0.2em]">
+        <p>
+          <span className="sm:hidden">Architecture / Interior / Drawings</span>
+          <span className="hidden sm:inline">
+            Architecture / Interior / 3D / Working Drawings
+          </span>
+        </p>
         <p>Scroll to explore ↓</p>
       </div>
     </section>
