@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AnimatedContent from "./AnimatedContent";
 import SpecularButton from "./SpecularButton";
 import StarBorder from "./StarBorder";
 
@@ -71,7 +70,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
-  const [heroAnimationComplete, setHeroAnimationComplete] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -113,35 +111,11 @@ export default function Navbar() {
     };
   }, [open]);
 
-  useEffect(() => {
-    const onHeroAnimationComplete = () => setHeroAnimationComplete(true);
-    window.addEventListener(
-      "postchitect:hero-animation-complete",
-      onHeroAnimationComplete,
-    );
-    return () =>
-      window.removeEventListener(
-        "postchitect:hero-animation-complete",
-        onHeroAnimationComplete,
-      );
-  }, []);
-
   return (
     <>
-      <AnimatedContent
-        distance={72}
-        direction="vertical"
-        reverse
-        duration={0.75}
-        ease="power3.out"
-        initialOpacity={0}
-        threshold={0}
-        delay={0.82}
-        data-animated="navbar"
-        className="fixed inset-x-0 top-0 z-50"
-      >
         <header
-          className={`relative bg-[#0b0f13]/70 shadow-lg shadow-black/25 backdrop-blur-xl transition-all duration-500 ${
+          data-animated="navbar"
+          className={`navbar-enter fixed inset-x-0 top-0 z-50 bg-[#0b0f13]/70 shadow-lg shadow-black/25 backdrop-blur-xl transition-colors duration-500 ${
             scrolled ? "bg-[#0b0f13]/85" : ""
           }`}
         >
@@ -238,12 +212,9 @@ export default function Navbar() {
           </div>
           <span
             aria-hidden="true"
-            className={`nav-scan-line ${
-              heroAnimationComplete ? "nav-scan-line--active" : ""
-            }`}
+            className="nav-scan-line nav-scan-line--active"
           />
         </header>
-      </AnimatedContent>
 
       {/* Mobile menu — fullscreen deep navy */}
       <div

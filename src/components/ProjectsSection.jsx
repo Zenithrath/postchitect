@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
+import ResponsiveImage from "./ResponsiveImage";
 import StarBorder from "./StarBorder";
 
 const projectSets = [
@@ -138,9 +139,10 @@ export default function ProjectsSection() {
           >
             <div className="col-span-6 grid h-full min-h-0 grid-rows-2 gap-1.5 sm:gap-3">
               <figure className="project-reveal-item group h-full min-h-0 overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={activeProject.images[0].src}
                   alt={activeProject.images[0].alt}
+                  sizes="50vw"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
@@ -148,9 +150,10 @@ export default function ProjectsSection() {
               </figure>
 
               <figure className="project-reveal-item group relative h-full min-h-0 overflow-hidden rounded-bl-[clamp(3rem,10vw,9rem)]">
-                <img
+                <ResponsiveImage
                   src={activeProject.images[1].src}
                   alt={activeProject.images[1].alt}
+                  sizes="50vw"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
@@ -171,9 +174,10 @@ export default function ProjectsSection() {
             </div>
 
             <figure className="project-reveal-item group col-span-3 h-full min-h-0 overflow-hidden">
-              <img
+              <ResponsiveImage
                 src={activeProject.images[2].src}
                 alt={activeProject.images[2].alt}
+                sizes="25vw"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
@@ -181,9 +185,10 @@ export default function ProjectsSection() {
             </figure>
 
             <figure className="project-reveal-item group col-span-3 h-full min-h-0 overflow-hidden rounded-tr-[clamp(2rem,12vw,12rem)]">
-              <img
+              <ResponsiveImage
                 src={activeProject.images[3].src}
                 alt={activeProject.images[3].alt}
+                sizes="25vw"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"

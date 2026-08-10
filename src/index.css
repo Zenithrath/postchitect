@@ -68,6 +68,21 @@
   }
 }
 
+.navbar-enter {
+  animation: navbar-enter 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.82s both;
+}
+
+@keyframes navbar-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* One reusable scroll entrance system for all page sections. */
 .reveal {
   --reveal-x: 0px;
@@ -200,11 +215,11 @@
 }
 
 .nav-scan-line--active {
-  animation: nav-line-visibility 1.8s ease both;
+  animation: nav-line-visibility 1.8s ease 2.2s both;
 }
 
 .nav-scan-line--active::after {
-  animation: nav-line-sweep 1.45s cubic-bezier(0.4, 0, 0.2, 1) 0.08s both;
+  animation: nav-line-sweep 1.45s cubic-bezier(0.4, 0, 0.2, 1) 2.28s both;
 }
 
 @keyframes nav-line-sweep {
@@ -224,5 +239,22 @@
   12%,
   78% {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in {
+    animation: none;
+  }
+
+  .reveal,
+  .project-reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

@@ -89,8 +89,6 @@ export default function AnimatedContent({
       onEnter: () => timeline.play(),
     });
 
-    // Hero and navbar use threshold 0 and must animate on a cold page load,
-    // even before ScrollTrigger has completed its first viewport refresh.
     const initialFrame =
       threshold === 0
         ? window.requestAnimationFrame(() => timeline.play())

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { WHATSAPP_URL } from "../constants/site";
 import Reveal from "./Reveal";
+import ResponsiveImage from "./ResponsiveImage";
 
 const services = [
   {
@@ -121,10 +122,11 @@ export default function ServicesSection() {
             delay={140}
           >
             <figure className="arch-corner-tr h-full min-h-[16rem] overflow-hidden sm:min-h-[24rem]">
-              <img
+              <ResponsiveImage
                 key={activeService.id}
                 src={activeService.image}
                 alt={`${activeService.title} project example`}
+                sizes="42vw"
                 loading="lazy"
                 decoding="async"
                 className="fade-in h-full w-full object-cover"
@@ -139,7 +141,7 @@ export default function ServicesSection() {
             className="mt-12 grid grid-cols-12 gap-x-4 border-y border-[#F1EEE7]/15 py-8 sm:mt-16 sm:gap-x-6 sm:py-10 lg:mt-20"
           >
             <div className="col-span-5">
-              <p className="text-[clamp(0.56rem,0.9vw,0.72rem)] uppercase tracking-[0.12em] text-[#F1EEE7]/45">
+              <p className="text-[clamp(0.56rem,0.9vw,0.72rem)] uppercase tracking-[0.12em] text-[#F1EEE7]/60">
                 House design
                 <br />
                 starts from
@@ -147,7 +149,7 @@ export default function ServicesSection() {
               <p className="mt-3 text-[clamp(2rem,5vw,5rem)] font-medium uppercase leading-none tracking-[-0.05em] text-[#DFA12A]">
                 RP400K
               </p>
-              <p className="mt-3 text-[clamp(0.52rem,0.85vw,0.68rem)] uppercase leading-relaxed tracking-[0.08em] text-[#F1EEE7]/40">
+              <p className="mt-3 text-[clamp(0.52rem,0.85vw,0.68rem)] uppercase leading-relaxed tracking-[0.08em] text-[#F1EEE7]/60">
                 Includes a complete working drawing package
               </p>
             </div>

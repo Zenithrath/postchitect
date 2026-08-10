@@ -187,3 +187,10 @@
     display: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .border-gradient-bottom,
+  .border-gradient-top {
+    animation: none;
+  }
+}

@@ -1,5 +1,26 @@
 import { useEffect, useRef } from "react";
 
+const visibleElements = new WeakSet();
+let sharedObserver;
+
+function getSharedObserver() {
+  if (!sharedObserver) {
+    sharedObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          visibleElements.add(entry.target);
+          sharedObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -48px 0px" },
+    );
+  }
+
+  return sharedObserver;
+}
+
 /**
  * Wrapper that reveals content when it enters the viewport.
  */
@@ -17,20 +38,17 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.classList.add("is-visible");
-            io.disconnect();
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -48px 0px" }
-    );
+    if (
+      visibleElements.has(el) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      el.classList.add("is-visible");
+      return undefined;
+    }
 
-    io.observe(el);
-    return () => io.disconnect();
+    const observer = getSharedObserver();
+    observer.observe(el);
+    return () => observer.unobserve(el);
   }, []);
 
   return (
