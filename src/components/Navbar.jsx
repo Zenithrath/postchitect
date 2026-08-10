@@ -1,42 +1,100 @@
 import { useEffect, useState } from "react";
-import { SITE, WHATSAPP_URL } from "../constants/site";
-import { navLinks } from "../data/navigation";
 
-function NavLink({ href, label, onNavigate, dark }) {
+const NAV_ITEMS = [
+  { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Contact", href: "#contact" },
+];
+
+function MenuIcon({ className }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M4 8h16M4 16h16" />
+    </svg>
+  );
+}
+
+function CloseIcon({ className }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  );
+}
+
+function NavLink({ label, href, active }) {
   return (
     <a
       href={href}
-      onClick={onNavigate}
-      className={`group relative py-2 text-[11px] font-medium uppercase tracking-[0.22em] transition-colors duration-300 ${
-        dark
-          ? "text-paper/75 hover:text-paper"
-          : "text-ink/70 hover:text-ink"
+      className={`group relative py-1 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300 ${
+        active
+          ? "text-[#DFA12A]"
+          : "text-[#F6F5F1]/75 hover:text-[#DFA12A]"
       }`}
     >
       {label}
-      <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-brown transition-transform duration-300 group-hover:scale-x-100" />
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 -bottom-[3px] h-px origin-left scale-x-0 bg-[#DFA12A] transition-transform duration-300 group-hover:scale-x-100"
+      />
+      {active && (
+        <span
+          aria-hidden="true"
+          className="absolute -bottom-[5px] left-1/2 h-[3px] w-[3px] -translate-x-1/2 rounded-full bg-[#DFA12A]"
+        />
+      )}
     </a>
   );
 }
 
 export default function Navbar() {
-  const [light, setLight] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
-  // Switch to a readable light navbar once the hero (dark) scrolls away.
   useEffect(() => {
-    const onScroll = () => {
-      const hero = document.getElementById("home");
-      const threshold = hero ? hero.offsetHeight - 110 : 0;
-      setLight(window.scrollY > threshold);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Subtle scrollspy — sets a muted gold dot on the current section link.
+  useEffect(() => {
+    const sections = NAV_ITEMS.map((item) =>
+      document.getElementById(item.href.slice(1))
+    ).filter(Boolean);
+
+    if (!sections.length) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-35% 0px -60% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => io.observe(section));
+    return () => io.disconnect();
   }, []);
 
   useEffect(() => {
@@ -49,140 +107,124 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const dark = !light && !open;
-
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        dark
-          ? "bg-transparent"
-          : "border-b border-ink/5 bg-paper/90 shadow-[0_1px_0_rgba(27,27,27,0.04)] backdrop-blur-md"
+      className={`nav-in fixed inset-x-0 top-0 z-50 bg-[#0b0f13]/70 shadow-lg shadow-black/25 backdrop-blur-xl transition-all duration-500 ${
+        scrolled ? "bg-[#0b0f13]/85" : ""
       }`}
     >
-      <div className="container-x flex h-16 items-center justify-between lg:h-20">
+      <div className="relative mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-10">
+        {/* Logo — left */}
         <a
           href="#home"
-          onClick={() => setOpen(false)}
-          className="group flex items-center gap-3"
+          className="group block"
           aria-label="Postchitect — back to top"
         >
-          <span
-            aria-hidden="true"
-            className="h-2 w-2 shrink-0 bg-brown transition-transform duration-300 group-hover:rotate-45"
-          />
-          <span
-            className={`text-[13px] font-bold tracking-[0.32em] transition-colors duration-500 ${
-              dark ? "text-paper" : "text-ink"
-            }`}
-          >
-            POSTCHITECT
+          <span className="block text-[13px] font-semibold uppercase tracking-[0.3em] text-[#F6F5F1] transition-colors duration-300 group-hover:text-[#DFA12A]">
+            Postchitect
+          </span>
+          <span className="mt-0.5 hidden text-[8px] uppercase tracking-[0.26em] text-[#AEB8C1] transition-colors duration-300 group-hover:text-[#DFA12A] sm:block">
+            Drafter &amp; Modelling
           </span>
         </a>
 
+        {/* Links — center */}
         <nav
-          aria-label="Primary"
-          className="hidden items-center gap-8 lg:flex"
+          aria-label="Main navigation"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex"
         >
-          {navLinks.map((link) => (
-            <NavLink key={link.href} {...link} dark={dark} />
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.href}
+              {...item}
+              active={active === item.href}
+            />
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        {/* CTA + mobile trigger — right */}
+        <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className={`hidden items-center gap-2 rounded-full px-6 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] transition-all duration-300 lg:inline-flex ${
-              dark
-                ? "bg-paper text-ink hover:bg-brown hover:text-paper"
-                : "bg-ink text-paper hover:bg-brown"
-            }`}
+            className="rounded-full border border-[#F6F5F1]/35 px-6 py-2.5 text-[12px] font-medium text-[#F6F5F1] transition-all duration-300 hover:border-[#DFA12A] hover:bg-[#DFA12A] hover:text-[#101C29] hover:shadow-[0_8px_24px_rgba(223,161,42,0.16)]"
           >
-            Konsultasi Project
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-x-0.5"
-            >
-              →
-            </span>
+            Contact Me
           </a>
-
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-            className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden ${
-              dark ? "text-paper" : "text-ink"
-            }`}
+            aria-label={open ? "Tutup menu" : "Buka menu"}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#F6F5F1]/25 text-[#F6F5F1] transition-colors duration-300 hover:border-[#DFA12A] hover:text-[#DFA12A] md:hidden"
           >
-            <span
-              className={`h-px w-6 bg-current transition-transform duration-300 ${
-                open ? "translate-y-[3.5px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`h-px w-6 bg-current transition-transform duration-300 ${
-                open ? "-translate-y-[3.5px] -rotate-45" : ""
-              }`}
-            />
+            {open ? (
+              <CloseIcon className="h-4 w-4" />
+            ) : (
+              <MenuIcon className="h-4 w-4" />
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — fullscreen deep navy */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 -z-10 flex flex-col bg-paper text-ink transition-all duration-500 lg:hidden ${
-          open
-            ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-3 opacity-0"
+        className={`fixed inset-0 z-10 flex flex-col bg-[#101C29] text-[#F6F5F1] transition-all duration-500 md:hidden ${
+          open ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
         <nav
-          aria-label="Mobile"
-          className="flex flex-1 flex-col overflow-y-auto px-6 pb-10 pt-24 sm:px-10"
+          aria-label="Main navigation"
+          className="flex flex-1 flex-col justify-center px-8 pb-16 sm:px-12"
         >
-          <ul className="divide-y divide-ink/10 border-y border-ink/10">
-            {navLinks.map((link, i) => (
-              <li key={link.href}>
+          <ul>
+            {NAV_ITEMS.map((item, i) => (
+              <li key={item.href}>
                 <a
-                  href={link.href}
+                  href={item.href}
                   onClick={() => setOpen(false)}
-                  className="group flex items-baseline justify-between py-5"
+                  className={`group flex items-baseline gap-4 border-b border-[#F6F5F1]/10 py-5 transition-all duration-500 ${
+                    open
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-3 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: open ? `${120 + i * 70}ms` : "0ms",
+                  }}
                 >
-                  <span className="flex items-baseline gap-4">
-                    <span className="text-[10px] tracking-[0.2em] text-brown">
-                      0{i + 1}
-                    </span>
-                    <span className="text-2xl font-semibold tracking-tight transition-transform duration-300 group-hover:translate-x-1 sm:text-3xl">
-                      {link.label}
-                    </span>
+                  <span className="text-[10px] tracking-[0.2em] text-[#DFA12A]">
+                    0{i + 1}
+                  </span>
+                  <span className="text-3xl font-medium tracking-tight transition-colors duration-300 group-hover:text-[#DFA12A]">
+                    {item.label}
                   </span>
                   <span
                     aria-hidden="true"
-                    className="text-mist transition-colors duration-300 group-hover:text-brown"
+                    className="ml-auto text-[#AEB8C1] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#DFA12A]"
                   >
-                    ↗
+                    →
                   </span>
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-10 flex flex-col gap-6">
-            <a href="#contact" onClick={() => setOpen(false)} className="btn btn-dark">
-              Konsultasi Project
-              <span aria-hidden="true">→</span>
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-mist"
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className={`group mt-10 inline-flex w-fit items-center gap-3 rounded-full bg-[#F6F5F1] px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#101C29] transition-all duration-500 hover:bg-[#DFA12A] hover:shadow-[0_8px_24px_rgba(223,161,42,0.16)] ${
+              open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }`}
+            style={{ transitionDelay: open ? "420ms" : "0ms" }}
+          >
+            Contact Me
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1"
             >
-              WhatsApp — <span className="text-ink">{SITE.whatsapp.display}</span>
-            </a>
-          </div>
+              →
+            </span>
+          </a>
         </nav>
       </div>
     </header>
