@@ -1,8 +1,24 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+const EASINGS = {
+  "power3.out": "cubic-bezier(0.22, 1, 0.36, 1)",
+  "power3.in": "cubic-bezier(0.55, 0.06, 0.68, 0.19)",
+};
+
+function toEasing(ease) {
+  return EASINGS[ease] ?? ease;
+}
+
+function toOffset(distance, reverse) {
+  if (typeof distance === "number") {
+    return `${reverse ? -distance : distance}px`;
+  }
+  return reverse ? `-${distance}` : distance;
+}
+
+function translateProp(direction) {
+  return direction === "horizontal" ? "translateX" : "translateY";
+}
 
 export default function AnimatedContent({
   children,
@@ -32,75 +48,84 @@ export default function AnimatedContent({
     const el = ref.current;
     if (!el) return undefined;
 
-    let scrollerTarget =
-      container || document.getElementById("snap-main-container") || null;
+    el.style.visibility = "visible";
 
-    if (typeof scrollerTarget === "string") {
-      scrollerTarget = document.querySelector(scrollerTarget);
+    const offset = toOffset(distance, reverse);
+    const axis = translateProp(direction);
+
+    const from = { transform: `${axis}(${offset}) scale(${scale})` };
+    const to = { transform: `${axis}(0px) scale(1)` };
+    if (animateOpacity) {
+      from.opacity = initialOpacity;
+      to.opacity = 1;
     }
 
-    const axis = direction === "horizontal" ? "x" : "y";
-    const offset = reverse
-      ? typeof distance === "number"
-        ? -distance
-        : `-${distance}`
-      : distance;
-    const startPct = (1 - threshold) * 100;
+    let animation;
+    let observer;
 
-    gsap.set(el, {
-      [axis]: offset,
-      scale,
-      opacity: animateOpacity ? initialOpacity : 1,
-      visibility: "visible",
-    });
+    const play = () => {
+      if (disappearAfter > 0) {
+        const out = {
+          transform: `${axis}(${toOffset(distance, !reverse)}) scale(0.8)`,
+        };
+        if (animateOpacity) out.opacity = initialOpacity;
 
-    const timeline = gsap.timeline({
-      paused: true,
-      delay,
-      onComplete: () => {
-        onComplete?.();
-
-        if (disappearAfter > 0) {
-          gsap.to(el, {
-            [axis]: reverse ? distance : -distance,
-            scale: 0.8,
-            opacity: animateOpacity ? initialOpacity : 0,
-            delay: disappearAfter,
-            duration: disappearDuration,
-            ease: disappearEase,
-            onComplete: () => onDisappearanceComplete?.(),
-          });
-        }
-      },
-    });
-
-    timeline.to(el, {
-      [axis]: 0,
-      scale: 1,
-      opacity: 1,
-      duration,
-      ease,
-    });
-
-    const trigger = ScrollTrigger.create({
-      trigger: el,
-      scroller: scrollerTarget,
-      start: `top ${startPct}%`,
-      once: true,
-      onEnter: () => timeline.play(),
-    });
-
-    const initialFrame =
-      threshold === 0
-        ? window.requestAnimationFrame(() => timeline.play())
-        : null;
-
-    return () => {
-      if (initialFrame !== null) {
-        window.cancelAnimationFrame(initialFrame);
+        animation = el.animate([from, to], {
+          delay: delay * 1000,
+          duration: duration * 1000,
+          easing: toEasing(ease),
+          fill: "both",
+        });
+        animation.finished.then(
+          () => {
+            onComplete?.();
+            el.animate([to, out], {
+              delay: disappearAfter * 1000,
+              duration: disappearDuration * 1000,
+              easing: toEasing(disappearEase),
+              fill: "forwards",
+            }).finished.then(
+              () => onDisappearanceComplete?.(),
+              () => {},
+            );
+          },
+          () => {},
+        );
+        return;
       }
-      trigger.kill();
-      timeline.kill();
+
+      animation = el.animate([from, to], {
+        delay: delay * 1000,
+        duration: duration * 1000,
+        easing: toEasing(ease),
+        fill: "both",
+      });
+      if (onComplete) {
+        animation.finished.then(() => onComplete(), () => {});
+      }
+    };
+
+    if (threshold > 0) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0].isIntersecting) return;
+          observer.disconnect();
+          play();
+        },
+        { threshold: 0.15 },
+      );
+      observer.observe(el);
+      return () => {
+        animation?.cancel();
+        observer?.disconnect();
+      };
+    }
+
+    const frame = window.requestAnimationFrame(() => play());
+    return () => {
+      window.cancelAnimationFrame(frame);
+      animation?.cancel();
+      observer?.disconnect();
     };
   }, [
     container,

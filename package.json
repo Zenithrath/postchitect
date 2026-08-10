@@ -10,7 +10,6 @@
     "images:optimize": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
-    "gsap": "^3.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
