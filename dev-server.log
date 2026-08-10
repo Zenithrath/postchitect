@@ -147,3 +147,195 @@
 [2m10:30:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
 [2m10:30:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
 [2m10:30:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:35:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:37:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/About.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectCard.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Services.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Process.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Contact.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/InteriorCta.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/PricingHighlight.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/technical/TechDecor.jsx, /src/index.css[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/about.js[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/navigation.js[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/pricing.js[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/process.js[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/projects.js[22m
+[2m10:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/data/services.js[22m
+[2m10:41:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m10:46:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m10:46:41 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m10:46:41 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:50:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m10:51:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m10:52:42 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m10:52:42 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:54:59 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:01:59 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:02:06 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:02:17 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:02:39 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:03:00 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:03:39 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:03:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx[22m
+[2m11:04:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m11:07:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:07:28 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:07:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:08:08 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:08:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:08:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:08:49 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:09:08 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m11:09:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/PricingSection.jsx, /src/index.css[22m
+[2m11:10:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:12:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:12:48 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:13:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:13:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:13:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:14:00 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:17:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:17:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:18:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:19:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:20:22 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:21:05 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:22:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:23:17 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:23:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:24:08 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:26:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:27:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:31:04 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:33:48 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m11:34:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:34:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m11:34:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:35:10 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:35:52 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:36:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:37:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m11:37:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Reveal.jsx, /src/index.css[22m
+[2m11:37:30 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AnimatedContent.jsx, /src/index.css[22m
+[2m11:37:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SpecularButton.jsx, /src/index.css[22m
+[2m11:38:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:41:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SectionLabel.jsx, /src/index.css[22m
+[2m11:42:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:43:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AnimatedContent.jsx, /src/index.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SpecularButton.jsx, /src/index.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SpecularButton.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/StarBorder.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:47:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m11:48:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:49:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-profile/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m11:51:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:55:05 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:58:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Reveal.jsx, /src/index.css[22m
+[2m11:59:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m11:59:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m11:59:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:02:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-cdp/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:03:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:04:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:04:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:05:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-cdp/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AboutSection.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ServicesSection.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m12:25:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:25:10 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: [postcss] C:/laragon/www/postchitect/src/index.css:202:3: Unclosed block[39m
+  Plugin: [35mvite:css[39m
+  File: [36mC:/laragon/www/postchitect/src/index.css[39m:202:2
+[33m  200|  
+  201|  @keyframes nav-line-sweep {
+  202|    from {
+     |    ^
+  203|      transform: translateX(-110%);
+  204|    }[39m
+      at Input.error (C:\laragon\www\postchitect\node_modules\postcss\lib\input.js:135:16)
+      at Parser.unclosedBlock (C:\laragon\www\postchitect\node_modules\postcss\lib\parser.js:582:22)
+      at Parser.endFile (C:\laragon\www\postchitect\node_modules\postcss\lib\parser.js:342:35)
+      at Parser.parse (C:\laragon\www\postchitect\node_modules\postcss\lib\parser.js:483:10)
+      at parse (C:\laragon\www\postchitect\node_modules\postcss\lib\parse.js:11:12)
+      at new LazyResult (C:\laragon\www\postchitect\node_modules\postcss\lib\lazy-result.js:171:16)
+      at Processor.process (C:\laragon\www\postchitect\node_modules\postcss\lib\processor.js:53:14)
+      at runPostCSS (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43983:52)
+      at async compilePostCSS (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43953:18)
+      at async compileCSS (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43808:27)
+      at async TransformPluginContext.handler (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43124:11)
+      at async EnvironmentPluginContainer.transform (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42453:18)
+      at async loadAndTransform (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35845:27)
+      at async viteTransformMiddleware (file:///C:/laragon/www/postchitect/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:37369:24)
+[2m12:26:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-check/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:28:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-check/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:30:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:31:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-hero/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:32:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AnimatedContent.jsx, /src/index.css[22m
+[2m12:32:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-hero/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:32:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-hero/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:33:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-hero/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:42:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:44:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:44:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:47:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:47:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:48:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:49:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-real/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:50:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:50:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m12:50:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-real/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:50:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-real/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m12:50:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m12:51:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-real/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m1:00:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:00:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:01:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-beauty/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m1:02:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:02:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:02:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-beauty/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m1:02:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-beauty/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m1:03:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:03:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:03:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.codex-edge-beauty/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.108.1_0/offscreendocument.html[22m
+[2m1:04:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:04:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/ContactSection.jsx, /src/components/Footer.jsx, /src/components/ServicesSection.jsx[22m
+[2m1:04:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:04:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:05:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:05:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ContactSection.jsx, /src/index.css[22m
+[2m1:07:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:07:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:09:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:09:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:11:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:11:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:12:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:13:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:14:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:14:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:16:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m1:20:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m1:20:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:20:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ProjectsSection.jsx, /src/index.css[22m
+[2m1:20:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SpecularButton.css[22m
+[2m1:20:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/StarBorder.css[22m
+[2m1:20:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/StarBorder.css[22m
+[2m1:21:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:21:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/SpecularButton.css[22m
+[2m1:24:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HeroSection.jsx, /src/index.css[22m
+[2m1:24:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m

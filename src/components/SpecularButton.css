@@ -9,7 +9,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
+  border: 1px solid rgba(174, 184, 193, 0.4);
   margin: 0;
   font-family: inherit;
   font-weight: 500;
@@ -29,7 +29,13 @@
     0 8px 24px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   outline: none;
-  transition: transform 0.15s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.15s ease;
+}
+
+.specular-button:hover {
+  border-color: rgba(223, 161, 42, 0.72);
 }
 
 .specular-button:active {

@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex h-[100svh] flex-col justify-center overflow-hidden bg-[#111315] pb-3 pt-20 text-[#c9c9c6] sm:pb-5 sm:pt-24 lg:pb-8 lg:pt-28"
+      className="relative flex h-[100svh] flex-col justify-center overflow-hidden bg-[#111315] pb-12 pt-20 text-[#c9c9c6] sm:min-h-[34rem] sm:pb-14 sm:pt-24 lg:pb-16 lg:pt-28"
     >
       {/* Full-bleed oversized wordmark */}
       <AnimatedContent
@@ -21,23 +21,34 @@ export default function HeroSection() {
         threshold={0}
         delay={0.28}
         data-animated="wordmark"
-        className="relative z-0 w-full"
+        className="relative z-20 w-full shrink-0 sm:z-0"
       >
         <div
           aria-hidden="true"
-          className="w-full select-none overflow-hidden whitespace-nowrap text-center font-sans text-[clamp(3.2rem,14.2vw,11rem)] font-semibold leading-[0.82] tracking-[-0.085em] text-[#bdbdb8]"
+          className="container-x flex w-full -translate-y-3 select-none flex-col overflow-hidden font-sans text-[clamp(5.25rem,min(31vw,16svh),8.75rem)] font-extrabold tracking-[-0.075em] sm:hidden"
+        >
+          <span className="block self-start leading-[0.64] text-[#D5D5D1]">
+            post
+          </span>
+          <span className="block self-end leading-[0.64] text-[#969B99]">
+            chitect
+          </span>
+        </div>
+        <div
+          aria-hidden="true"
+          className="hidden w-full select-none overflow-hidden whitespace-nowrap text-center font-sans font-semibold leading-[0.82] tracking-[-0.09em] text-[#d0d0cc] sm:block sm:text-[clamp(5rem,14.2vw,11rem)]"
         >
           postchitect
         </div>
       </AnimatedContent>
 
-      <div className="relative z-10 -mt-[clamp(0.4rem,1.75vw,1.75rem)] grid min-w-0 w-full grid-cols-2 items-end gap-2 px-4 sm:grid-cols-4 sm:gap-3 sm:px-6 lg:gap-4 lg:px-10">
+      <div className="relative z-10 mt-3 grid min-w-0 w-full grid-cols-2 items-end gap-1.5 px-5 sm:-mt-[clamp(0.45rem,1.75vw,1.75rem)] sm:grid-cols-4 sm:gap-3 sm:px-8 lg:gap-4 lg:px-12">
         {heroImages.map((image, index) => (
           <AnimatedContent
             key={image.id}
             distance="100vw"
             direction="horizontal"
-            reverse={index < 2}
+            reverse={index % 2 === 0}
             duration={1}
             ease="power3.out"
             animateOpacity={false}
@@ -50,9 +61,17 @@ export default function HeroSection() {
                 : undefined
             }
             data-animated={`panel-${index + 1}`}
-            className="min-w-0"
+            className="min-w-0 overflow-hidden"
           >
-            <figure className="group relative h-[clamp(9.5rem,32svh,14rem)] min-w-0 overflow-hidden bg-[#1e2225] sm:h-[clamp(17rem,33vw,22rem)]">
+            <figure
+              className={`hero-mobile-panel group relative min-w-0 overflow-hidden bg-[#1e2225] ${
+                index === 0
+                  ? "rounded-tl-[clamp(2.5rem,12vw,5rem)] sm:rounded-none"
+                  : index === heroImages.length - 1
+                    ? "rounded-br-[clamp(2.5rem,12vw,5rem)] sm:rounded-none"
+                    : ""
+              }`}
+            >
               <img
                 src={image.src}
                 alt={image.alt}
@@ -71,6 +90,11 @@ export default function HeroSection() {
             </figure>
           </AnimatedContent>
         ))}
+      </div>
+
+      <div className="container-x pointer-events-none absolute inset-x-0 bottom-5 z-20 flex items-center justify-between text-[8px] uppercase tracking-[0.2em] text-[#F1EEE7]/40 sm:bottom-6 sm:text-[9px]">
+        <p>Architecture / Interior / Drawings</p>
+        <p>Scroll to explore ↓</p>
       </div>
     </section>
   );

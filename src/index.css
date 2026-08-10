@@ -4,118 +4,147 @@
 
 @layer base {
   html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 4.5rem;
+    background: #111315;
   }
 
   body {
-    @apply bg-[#191b1d] font-sans text-[#c9c9c6] antialiased;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: #111315;
+    color: #f1eee7;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
   img {
-    @apply block max-w-full;
+    display: block;
+    max-width: 100%;
   }
 
   ::selection {
-    background-color: #8b6548;
-    color: #f8f6f3;
+    background: #dfa12a;
+    color: #111315;
   }
 
   :focus-visible {
-    outline: 2px solid #8b6548;
+    outline: 2px solid #dfa12a;
     outline-offset: 3px;
-  }
-}
-
-/* Editorial content entrance sequence */
-.hero-copy {
-  opacity: 0;
-  animation: hero-copy-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
-}
-
-.hero-copy:last-child {
-  animation-delay: 0.72s;
-}
-
-@keyframes hero-copy-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
-  }
-
-  .label {
-    @apply flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.28em];
-  }
-  .label::before {
-    content: "";
-    @apply block h-px w-8 shrink-0 bg-brown;
-  }
-
-  .btn {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.16em] transition-all duration-300;
-  }
-  .btn-dark {
-    @apply bg-ink text-paper hover:bg-brown;
-  }
-  .btn-light {
-    @apply bg-paper text-ink hover:bg-brown hover:text-paper;
-  }
-  .btn-outline-light {
-    @apply border border-paper/25 text-paper hover:border-brown hover:text-brown;
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
   }
 }
 
-/* Scroll reveal */
+.hero-mobile-panel {
+  height: clamp(7.5rem, calc((100svh - 10rem) / 2), 21rem);
+}
+
+@media (max-width: 639px) and (max-height: 700px) {
+  .hero-mobile-panel {
+    height: clamp(7.5rem, calc((100svh - 16rem) / 2), 18rem);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-mobile-panel {
+    height: clamp(17rem, 33vw, 22rem);
+  }
+}
+
+/* One reusable scroll entrance system for all page sections. */
 .reveal {
+  --reveal-x: 0px;
+  --reveal-y: 34px;
+  --reveal-scale: 1;
+
   opacity: 0;
-  transform: translateY(26px);
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0)
+    scale(var(--reveal-scale));
   transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.65s ease,
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
+
+.reveal--left {
+  --reveal-x: -46px;
+  --reveal-y: 0px;
+}
+
+.reveal--right {
+  --reveal-x: 46px;
+  --reveal-y: 0px;
+}
+
+.reveal--scale {
+  --reveal-y: 22px;
+  --reveal-scale: 0.965;
+}
+
 .reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
+}
+
+.project-reveal-item {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.985);
+  transition:
+    opacity 0.55s ease,
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-reveal-item:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.project-reveal-item:nth-child(2) {
+  transition-delay: 190ms;
+}
+
+.reveal.is-visible .project-reveal-item {
   opacity: 1;
   transform: none;
 }
 
-/* Hero entrance animations */
-.hero-anim {
-  opacity: 0;
-  animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: var(--d, 0s);
-}
-.hero-img-anim {
-  opacity: 0;
-  animation: hero-img-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: var(--d, 0s);
+.reveal.is-visible > #featured-project-panel > .project-reveal-item:nth-child(2) {
+  transition-delay: 280ms;
 }
 
-@keyframes hero-fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.reveal.is-visible > #featured-project-panel > .project-reveal-item:nth-child(3) {
+  transition-delay: 370ms;
 }
-@keyframes hero-img-reveal {
+
+.arch-corner-tr {
+  border-top-right-radius: clamp(3rem, 12vw, 12rem);
+}
+
+.fade-in {
+  animation: fade-in 0.32s ease both;
+}
+
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(40px) scale(1.05);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -123,34 +152,7 @@
   }
 }
 
-/* Scroll indicator */
-@keyframes scroll-dot {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-}
-.scroll-dot {
-  animation: scroll-dot 1.9s ease-in-out infinite;
-}
-
-/* Utility: hide scrollbars (mobile hero strip) */
-.scrollbar-none {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-
-/* One-shot scan line after the hero entrance completes. */
+/* One-shot line sweep after the Hero entrance sequence. */
 .nav-scan-line {
   position: absolute;
   right: 0;
@@ -222,23 +224,5 @@
   12%,
   78% {
     opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .reveal,
-  .hero-anim,
-  .hero-img-anim,
-  .hero-copy {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-    transition: none !important;
-  }
-  .scroll-dot {
-    animation: none;
   }
 }

@@ -6,15 +6,15 @@ export const SITE = {
   name: "POSTCHITECT",
   tagline: "Drafter & Modelling",
   whatsapp: {
-    number: "+62 812 3456 7890",
-    display: "+62 812 3456 7890",
+    number: "+62 877-6619-5531",
+    display: "+62 877-6619-5531",
     defaultMessage:
       "Halo Postchitect, saya ingin konsultasi project desain.",
   },
   email: "hello@postchitect.com",
   instagram: {
     handle: "@postchitect",
-    url: "https://instagram.com/postchitect",
+    url: "https://www.instagram.com/postchitect/",
   },
   credit: "Designed & Developed by Dignify",
   copyrightYear: 2026,

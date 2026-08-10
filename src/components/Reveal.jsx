@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Wrapper that fades content upward when it enters the viewport.
- * Respects prefers-reduced-motion.
+ * Wrapper that reveals content when it enters the viewport.
  */
 export default function Reveal({
   children,
   className = "",
   delay = 0,
+  variant = "up",
   as: Tag = "div",
   ...rest
 }) {
@@ -16,11 +16,6 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.classList.add("is-visible");
-      return;
-    }
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -41,7 +36,7 @@ export default function Reveal({
   return (
     <Tag
       ref={ref}
-      className={`reveal ${className}`}
+      className={`reveal reveal--${variant} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
       {...rest}
     >

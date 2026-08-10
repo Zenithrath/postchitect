@@ -19,7 +19,7 @@ export default {
         serif: ["Playfair Display", "Georgia", "serif"],
       },
       maxWidth: {
-        content: "1400px",
+        content: "1440px",
       },
     },
   },
