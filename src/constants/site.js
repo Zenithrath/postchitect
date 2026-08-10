@@ -1,0 +1,26 @@
+/**
+ * Central site configuration.
+ * Replace contact details and links here — every section reads from this file.
+ */
+export const SITE = {
+  name: "POSTCHITECT",
+  tagline: "Drafter & Modelling",
+  whatsapp: {
+    number: "+62 812 3456 7890",
+    display: "+62 812 3456 7890",
+    defaultMessage:
+      "Halo Postchitect, saya ingin konsultasi project desain.",
+  },
+  email: "hello@postchitect.com",
+  instagram: {
+    handle: "@postchitect",
+    url: "https://instagram.com/postchitect",
+  },
+  credit: "Designed & Developed by Dignify",
+  copyrightYear: 2026,
+};
+
+export const WHATSAPP_URL = `https://wa.me/${SITE.whatsapp.number.replace(
+  /\D/g,
+  ""
+)}?text=${encodeURIComponent(SITE.whatsapp.defaultMessage)}`;
